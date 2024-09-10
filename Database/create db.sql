@@ -1,0 +1,2 @@
+/*Membuat DAta Base Baru*/
+CREATE DATABASE LATIHAN1
