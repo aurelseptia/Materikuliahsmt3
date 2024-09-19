@@ -17,7 +17,7 @@ class Mobil:
 #Membuat object baru M1
 M1 = Mobil("Bridgestone", "Toyota-Kijang", 1500)
 print(M1)
-print("Jumlah Mobil:". Mobil.jumlah_mobil)
+print("Jumlah Mobil:", Mobil.jumlah_mobil)
 M1.boreup(500)
 print(M1)
 #Membuat objek Baru M2
