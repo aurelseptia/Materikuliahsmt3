@@ -8,7 +8,7 @@ class Mobil:
         self.merkban = ban
         self.merkmobil = merk
         self.kapasitas = cc
-        mobil.jumlahmobil += 1
+        Mobil.jumlah_mobil += 1
     #Membuat method string
     def __str__(self):
         return f"{self.merkban}, {self.merkmobil}, {self.kapasitas}"
@@ -23,4 +23,4 @@ print(M1)
 #Membuat objek Baru M2
 M2 = Mobil("Pirelli", "Subaru", 2000)
 print (M2)
-prnt("jumlah mobil: ", Mobil.jumlah_mobil)
+print("jumlah mobil: ", Mobil.jumlah_mobil)
