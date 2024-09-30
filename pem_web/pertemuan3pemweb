@@ -1,1 +1,12 @@
+<html lang="en"
+<head>
+ <body>
+    <form><input type="text" placeholder="haloo"/>
+        <input type="radio">
+        <input type="checkbox">
+        <input type="submit">
 
+
+        </form>
+ </body>
+</head>
