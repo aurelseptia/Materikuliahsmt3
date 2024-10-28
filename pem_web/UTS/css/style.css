@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+body{
+    height: 100vh;
+}
+header.navbar-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+header.navbar-container .logo{
+    display: flex;
+    align-items: center;
+    
+}
+header.navbar-container .logo img{
+    width: 150px;
+}
+nav.nav-list ul{
+    display: flex;
+    gap: 1rem;
+}
+nav.nav-list li{
+    list-style-type: none;
+    font-size: 1.05rem;
+}
+
+nav.nav-list ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: .2s ease-in-out;
+    border: 3px solid transparent;
+
+}
+nav.nav-list ul li a:hover{
+    background-color: transparent;
+    border: 3px solid #78A2D2;
+    color: black;
+}
+.content-section{
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+}
+.card {
+    width: 100%; /* Sesuaikan lebar kartu sesuai kebutuhan */
+    border: 3px solid #ccc;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberikan dimensi visual */
+    margin: 1rem; /* Jarak antara kartu dengan elemen lainnya */
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto ;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.title{
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+.content p{
+    font-size: 1.5rem;
+    font-family: 'Quicksand';
+}
+.content .content-image{
+    display: flex;
+}
+.content .content-image img{
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+}
+
+.content .content-description button{
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-color: #78A2D2;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-block: 5px;
+    transition: .2s ease-in-out;
+    color: white;
+}
+.content .content-description button:hover{
+    background-color: transparent;
+    border: 3px solid #78A2D2;
+    color: black;
+}
+main aside{
+  position: fixed;
+  /* inset-block: 0; */
+  inset-inline-end: 0;
+}
+main aside .image-aside img{
+    cursor: pointer;
+}
+main aside .social-media{
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul{
+  padding: 1.5rem 1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #78A2D2;
+  display: flex;
+  flex-flow:column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+
+}
+
+main aside .social-media li{
+  list-style-type:none;
+}
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+main aside .social-media li a:hover {
+  color: moccasin;
+}
+
+#nilai-card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.nilai{
+    padding: 50px;
+}
+.nilai ul li p{
+    font-size: 1.5rem;
+    font-family: 'Quicksand';    
+}
+.sub-title{
+    font-weight: 800;
+}
+.nilai ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.layanan{
+    padding: 50px;
+}
+p{
+    font-family: 'Quicksand';
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px){
+header.navbar-container{
+    flex-direction: column;
+}
+header.navbar-container .nav-list ul{
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+}
+mian .content{
+    flex-direction: column;
+    gap: 2rem ;
+}
+main .content .content-description .title {
+    font-size: 3rem;
+  }
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+  main .content .content-image {
+    order: -1;
+  }
+}
+    
+footer{
+    background-color: #78A2D2;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+.footer-links{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-links a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    transition: .2s ease-in-out;
+    font-weight: 500;
+    border: 3px solid #78A2D2;
+    border-radius: 9999px;
+}
+
+.footer-links a:hover{
+border: 3px solid #fff ;
+background-color: transparent;
+border-radius: 999px;
+color: black;
+}
