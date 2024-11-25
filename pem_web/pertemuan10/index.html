@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title id="title">Sample Page</title>
+</head>
+<body>
+    <h1 class="Hello">Hello World</h1>
+    <p>aurel cantik banget</p>
+    <button id="trigger">Change content</button>
+    <script>
+        const button= document.getElementById("trigger");
+        let title = document.getElementById("title");
+        let heading = document.getElementsByClassName("Hello");
+        let p = document.querySelector("p");
+    //proses append dan menambahkan elemen baru
+    let newParagraph = document.createElement("p");
+    newParagraph.innerHTML = "Ini paragraph tambahan.";
+    button.addEventListener("click", () => {
+        title.innerHTML = "DOM manipulating";
+        heading[0].style.color = "pink";
+        p.innerHTML = "selamat datang...";
+        document.body.appendChild(newParagraph);
+    });
+    </script>
+</body>
+</html>
