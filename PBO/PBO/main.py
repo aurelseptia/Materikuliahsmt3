@@ -15,7 +15,7 @@ class InputForm(BoxLayout):
             host="localhost",
             user="root",
             password="",
-            database="dicafe"
+            database="kripik21"
         )
         self.mycursor = self.mydb.cursor()
 
@@ -122,7 +122,7 @@ class InputForm(BoxLayout):
                 self.ids.pesanan_input.text = result[1]   # Pesanan
                 
                 # Simpan ID mahasiswa yang akan diupdate
-                self.id_update = nim
+                self.id_update = kripik21
                 
                 # Ganti teks tombol dari "Tambah Data" menjadi "Update Data"
                 self.ids.tombol_simpan.text = "Update Data"
@@ -150,7 +150,7 @@ class InputForm(BoxLayout):
                 self.show_error_popup("Semua kolom harus diisi!")
                 return
             # Query untuk mengupdate data pesanan
-            query = "UPDATE tbl_pesanan SET nama = %s, nim = %s, jurusan = %s WHERE nim = %s"
+            query = "UPDATE tbl_pesanan SET nama = %s, pesanan = %s WHERE pesanan = %s"
             values = (nama, pesanan)
             self.mycursor.execute(query, values)
             self.mydb.commit()
