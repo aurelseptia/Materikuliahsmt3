@@ -28,7 +28,7 @@ class InputForm(BoxLayout):
         # Ambil data dari text input
         
             nama = self.ids.nama_input.text
-            nim = self.ids.pesanan_input.text
+            pesanan = self.ids.pesanan_input.text
 
             # Validasi inputan tidak kosong
             if not nama or not pesanan:
@@ -42,7 +42,7 @@ class InputForm(BoxLayout):
                 return
 
             # Insert data ke database
-            sql = "INSERT INTO tbl_cafe (nama, pesanan) VALUES (%s, %s)"
+            sql = "INSERT INTO tbl_kripik21 (nama, pesanan) VALUES (%s, %s)"
             val = (nama, pesanan)
             try:
                 self.mycursor.execute(sql, val)
@@ -72,7 +72,7 @@ class InputForm(BoxLayout):
 
     def show_table(self):
         # Ambil data dari database
-        self.mycursor.execute("SELECT * FROM tbl_dicafe order by no")
+        self.mycursor.execute("SELECT * FROM tbl_kripik21 order by no")
         data_pesanan = self.mycursor.fetchall()
 
         # Hapus widget di tabel sebelumnya
@@ -175,7 +175,7 @@ class InputForm(BoxLayout):
         popup.open()
 
 
-    def delete_data(self, nim):
+    def delete_data(self, pesanan):
         try:        # Konfirmasi pop-up
             confirm_popup = Popup(
                 title="Konfirmasi Hapus",
@@ -193,7 +193,7 @@ class InputForm(BoxLayout):
             btn_layout.add_widget(btn_no)
             
             confirm_popup.content = BoxLayout(orientation='vertical', spacing=10)
-            confirm_popup.content.add_widget(Label(text=f"Yakin ingin menghapus data dengan NIM {pesanan}?"))
+            confirm_popup.content.add_widget(Label(text=f"Yakin ingin menghapus data dengan PESANAN {pesanan}?"))
             confirm_popup.content.add_widget(btn_layout)
             confirm_popup.open()
         
@@ -226,7 +226,7 @@ class form(App):
     def on_start(self):
         self.root_widget.show_table()
         Window.size = (1000, 600)
-        self.title = "Form Data dicafe"
+        self.title = "Form Data KRIPIK21"
         self.icon = "logo.png"
 
     def on_stop(self):
