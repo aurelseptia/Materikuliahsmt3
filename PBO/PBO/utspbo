@@ -1,1 +1,35 @@
+#multilevel inheritance
+class User:
+    def __init__(self, username, email, userId):
+        self.username = username
+        self.email = email
+        self.userId = userId
 
+    def login(self, username, email):
+        print(f"{self.username} dengan email {self.email} berhasil login.")
+    
+    def logout(self):
+        print(f"{self.username} berhasil logout.")
+class BasicUser(User):
+    def __init__(self, username, email, userId):
+        super().__init__(username, email, userId)
+
+    def viewProduct(self, productId):
+        print(f"Menampilkan informasi produk dengan ID {productId}.")
+
+    def addToCart(self, productId, quantity):
+        print(f"Menambahkan {quantity} unit produk dengan ID {productId} ke keranjang belanja.")
+    def __init__(self, username, email, userId):
+        super().__init__(username, email, userId)
+
+    def applyVoucher(self, voucherCode, cartTotal):
+        print(f"Voucher {voucherCode} diterapkan pada total belanja {cartTotal}.")
+    def requestPrioritySupport(self, issueDescription):
+        print(f"Menghubungi dukungan prioritas dengan deskripsi masalah: {issueDescription}")
+premium_user = PremiumUser("aurelshop", "aurelseptia7@gmail.com", "220904")
+premium_user.login("aurelshop", "aurelseptia7@gmail.com")
+premium_user.viewProduct(101)
+premium_user.addToCart(101, 2)
+premium_user.applyVoucher("DISCOUNT10", 500000)
+premium_user.requestPrioritySupport("Tidak dapat melakukan pembayaran dengan kartu kredit.")
+premium_user.logout()
